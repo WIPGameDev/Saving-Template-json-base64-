@@ -25,7 +25,7 @@ public class GamePersist : MonoBehaviour
             {
                 var b64 = streamReader.ReadToEnd();
                 var plainTextBytes = Convert.FromBase64String(b64);
-                string json = Encoding.UTF8.GetString(plainTextBytes);
+                var json = Encoding.UTF8.GetString(plainTextBytes);
 
                 gameData = JsonUtility.FromJson<GameData>(json);
 

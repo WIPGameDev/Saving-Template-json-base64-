@@ -57,4 +57,9 @@ public class GamePersist : MonoBehaviour
             streamWriter.Write(b64);
         }
     }
+    
+    public void FullWipe()
+    {
+        File.Delete(saveLocation);
+    }
 }

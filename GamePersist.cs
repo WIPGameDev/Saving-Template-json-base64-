@@ -17,7 +17,7 @@ public class GamePersist : MonoBehaviour
 
     void OnApplicationQuit() => Save();
 
-    void Load()
+    public void Load()
     {
         try
         {
@@ -41,7 +41,7 @@ public class GamePersist : MonoBehaviour
         }
     }
 
-    void Save()
+    public void Save()
     {
         foreach (var persist in FindObjectsOfType<MonoBehaviour>(includeInactive:true).OfType<IPersist>())
         {

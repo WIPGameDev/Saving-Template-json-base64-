@@ -15,7 +15,7 @@ public class GamePersist : MonoBehaviour
 
     void Start() => Load();
     
-    void OnApplicationPause() => Save();
+    void OnDisable() => Save();
 
     void OnApplicationQuit() => Save();
 

@@ -14,6 +14,8 @@ public class GamePersist : MonoBehaviour
     void Awake() => saveLocation = Path.Combine(Application.persistentDataPath + "/SaveGame.json");
 
     void Start() => Load();
+    
+    void OnApplicationPause() => Save();
 
     void OnApplicationQuit() => Save();
 

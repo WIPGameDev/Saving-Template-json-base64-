@@ -9,8 +9,6 @@ public class GamePersist : MonoBehaviour
     GameData gameData = new GameData();
     string saveLocation;
 
-    //To Add ->  Serializefield array of persists
-
     void Awake() => saveLocation = Path.Combine(Application.persistentDataPath + "/SaveGame.json");
 
     void Start() => Load();
